@@ -1,0 +1,66 @@
+/* sets overall page layout */ 
+    html, body { margin:0; padding:30px; height:100%; }
+
+
+    .heading{
+        text-align:center; /*centers heading in middle of page */ 
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+
+    /* specific styling for category/cuisine filter buttons */ 
+    button { height:40px; width: 
+        130px; border-radius:3%; /*adjusting border-radius creates more rounded corners */ 
+        border: 1px solid#efedeb; 
+        font-weight: bold; 
+        font-size: 1em
+    }
+
+    /*centers page content, limits to 90% of page width */ 
+    body{
+        margin: auto;
+        width:90% 
+    }
+
+    /* uses FlexBox to center all filter buttons, wraps them onto next row in case of overflow */ 
+    .button-container{
+        display:flex;
+        flex-wrap:wrap;
+        align-content:center; 
+        justify-content:center;
+        gap: 3px;
+    }
+ 
+    /*uses FlexBox to center all restaurant items; wrap them into rows in case of overflow */ 
+
+    .item-container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        gap: 23px
+    }
+
+/* specific styling for each restaurant item, adjusting font size and weight */ 
+    .item {
+      height:180px; width:250px;
+      padding:0px; margin:20px 0;
+      font-size:20px; 
+      font-weight: bold;
+    }
+
+    .item-text{
+        margin: 4px; /* adjusts margin for all restaurant titles*/ 
+    }
+
+    /* section below adjusts background for each specific categories' restaurant items */ 
+    .Italian.item { background:#efedeb; }
+    .Mexican.item  { background:#efedeb; }
+    .French.item { background:#efedeb; }
+    .Seafood.item { background:#efedeb; }
+    .Indian.item { background:#efedeb; }
+    .American.item { background:#efedeb; }
+    .Sushi.item { background:#efedeb; } 
+
+    .item.hidden { display:none; } /* used by external javascript; ensures items that don't match 
+    selected category/cuisine are hidden from webpage display */ 
+    

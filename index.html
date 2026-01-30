@@ -1,0 +1,85 @@
+<html>
+<head> <!-- linking external javascript and stylesheet to HTML -->
+    <link href="style.css" 
+    type="text/css" 
+    rel="stylesheet" />
+    <title>Restaurant Filter</title>
+    <script src="script.js"></script>
+</head>
+
+<!-- creates page heading with chicago restaurant week logo, description, and headline -->
+<body>
+<div class="heading">
+  <img src="logo.png" width="30%"/>
+  <br>Chicago Restaurant Week is an annual culinary celebration with participatory restaurants offering prix fixe lunch and dinners. Taste the world, all in one city!</br>
+  <h1>2026 PARTICIPATING RESTAURANTS</h1>
+</div>
+
+  
+<!-- establishes cuisine filter buttons -->
+<div class="button-container">
+
+<!-- buttons call javascript filter function in response to user click, specifies cuisine types and "ALL" button -->
+  <button onclick="filter('all')">All</button>
+  <button onclick="filter('Italian')">Italian 🍝</button>
+  <button onclick="filter('Mexican')">Mexican 🌮</button>
+  <button onclick="filter('French')">French 🍲</button>
+  <button onclick="filter('Seafood')">Seafood 🦞</button>
+  <button onclick="filter('Indian')">Indian 🥘</button>
+  <button onclick="filter('American')">American 🍔</button>
+  <button onclick="filter('Sushi')">Sushi 🍣</button>
+
+</div>
+
+
+<div class="item-container"> <!-- container allows specific styling purposes in CSS to apply for all items; creates cohesive restaurant options page
+individual restaurant items grouped by cuisine category -- each includes image, link to restaraunt website, and title -->
+
+  <div class="item Italian"> <!-- identifies individual restaurant as item, assigns it to specific cuisine category-->
+    <a href="https://www.treditarestaurant.com/events/chicago-restaurant-week/">
+      <img src="tredita.png" width="100%"/></a> <!-- wrapping <img> tag INSIDE <a> tag embeds hyperlink into image itself instead of text -->
+      <div class="item-text">Tre Dita</div></div> <!-- item-text class allows specific styling to apply only toward restaurant titles in CSS -->
+
+  <div class="item Italian"><a href="https://www.adalinachicago.com/event/chicago-restaurant-week-1/"><img src="adalina.png" width="100%"/></a><div class="item-text">Adalina</div></div>    
+  <div class="item Italian"><a href="https://www.rpmrestaurants.com/blogs/celebrate-restaurant-week-with-rpm/"><img src="rpmitalian.png" width="100%"/></a><div class="item-text">RPM Italian</div></div>     
+  <div class="item Italian"><a href="https://www.ummochicago.com/"><img src="ommo.png" width="100%"/></a><div class="item-text">UMMO </div></div>      
+  <div class="item Italian"><a href="https://www.allavitachicago.com/"><img src="allavita.png" width="100%"/></a><div class="item-text">Alla Vita </div></div>  
+  <div class="item Italian"><a href="https://www.buona-terra.com/"><img src="buonaterra.png" width="100%"/></a><div class="item-text">Buona Terra </div></div>   
+
+  <div class="item Mexican"><a href="https://www.costeracocina.com/"><img src="costeria.png" width="100%"/></a><div class="item-text">Costeria Cocina Tulum</div></div>    
+  <div class="item Mexican"><a href="https://cruzblancachi.com/"><img src="cruz.png" width="100%"/></a><div class="item-text">Cruz Blanca</div></div>    
+  <div class="item Mexican"><a href="https://bocaditoschicago.com/"><img src="bocaditos.png" width="100%"/></a><div class="item-text">Bocaditos Chicago</div></div>     
+  <div class="item Mexican"><a href="https://mercaditorivernorth.com/"><img src="mercadito.png" width="100%"/></a><div class="item-text">Mercadito </div></div>      
+  <div class="item Mexican"><a href="https://www.lajosie.com/"><img src="lajosie.png" width="100%"/></a><div class="item-text">La Josie</div></div>   
+
+  <div class="item French"><a href="https://www.petiteedith.com/menus"><img src="petite.png" width="100%"/></a><div class="item-text">Petite Edith</div></div>    
+  <div class="item French"><a href="https://www.dinelaserre.com/"><img src="laserre.png" width="100%"/></a><div class="item-text">La Serre</div></div>    
+  <div class="item French"><a href="https://www.monamigabi.com/"><img src="monamigabi.png" width="100%"/></a><div class="item-text">Mon Ami Gabi</div></div>     
+  <div class="item French"><a href="https://petitpomeroy.com/"><img src="petitpomeroy.png" width="100%"/></a><div class="item-text">Petit Pomeroy </div></div>      
+  <div class="item French"><a href="https://www.bistronomic.net/restaurant-week-2026-celebrating-bistronomics-15th-birthday"><img src="bistronomic.png" width="100%"/></a><div class="item-text">bistronomic</div></div>   
+
+  <div class="item Seafood"><a href="https://www.shawscrabhouse.com/"><img src="shaw.png" width="100%"/></a><div class="item-text">Shaw's Crab House</div></div>    
+  <div class="item Seafood"><a href="https://ocean-prime.com/locations-menus/chicago/"><img src="ocean.png" width="100%"/></a><div class="item-text">Ocean Prime</div></div>    
+  <div class="item Seafood"><a href="https://www.cindysrooftop.com/"><img src="cindys.png" width="100%"/></a><div class="item-text">Cindy's</div></div>     
+  <div class="item Seafood"><a href="https://www.azulchi.com/"><img src="azul.png" width="100%"/></a><div class="item-text">Azul</div></div>      
+
+  <div class="item Indian"><a href="https://www.kamabistro.com/"><img src="kama.png" width="100%"/></a><div class="item-text">Kama Bistro</div></div>    
+  <div class="item Indian"><a href="https://www.tandoorchicago.com/"><img src="tandoor.png" width="100%"/></a><div class="item-text">Tandoor Char House</div></div>    
+  <div class="item Indian"><a href="https://www.roopchicago.com/"><img src="roop.png" width="100%"/></a><div class="item-text">ROOP Chicago</div></div>     
+  <div class="item Indian"><a href="https://www.bargoachicago.com/"><img src="bargoa.png" width="100%"/></a><div class="item-text">Bar Goa</div></div>     
+  <div class="item Indian"><a href="https://www.basantchicago.com/"><img src="basant.png" width="100%"/></a><div class="item-text">Basant Modern Indian</div></div>     
+
+  <div class="item American"><a href="https://thesmithrestaurant.com/location/chicago/"><img src="smith.png" width="100%"/></a><div class="item-text">The Smith</div></div>   
+  <div class="item American"><a href="https://www.bokachicago.com/"><img src="boka.png" width="100%"/></a><div class="item-text">BOKA Restaurant</div></div>    
+  <div class="item American"><a href="https://hubbardinn.com/"><img src="hubbard.png" width="100%"/></a><div class="item-text">Hubbard Inn</div></div>     
+  <div class="item American"><a href="https://www.girlandthegoat.com/chicago"><img src="girl.png" width="100%"/></a><div class="item-text">Girl & The Goat</div></div>     
+  <div class="item American"><a href="https://www.trumphotels.com/chicago/dining/fine-dining-chicago"><img src="terrace.png" width="100%"/></a><div class="item-text">Terrace 16</div></div>     
+  <div class="item American"><a href="https://www.daisieschicago.com/"><img src="daisies.png" width="100%"/></a><div class="item-text">Daisies</div></div>     
+
+  <div class="item Sushi"><a href="https://taogroup.com/venues/tao-asian-bistro-chicago/"><img src="tao.png" width="100%"/></a><div class="item-text">TAO</div></div>    
+  <div class="item Sushi"><a href="https://www.sushisanrestaurant.com/"><img src="sushisan.png" width="100%"/></a><div class="item-text">Sushi-san</div></div>    
+  <div class="item Sushi"><a href="https://kamehachi.com/"><img src="kamehachi.png" width="100%"/></a><div class="item-text">Kamehachi</div></div>     
+</div>
+
+</body>
+</html>
